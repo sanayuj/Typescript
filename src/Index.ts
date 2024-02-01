@@ -41,3 +41,19 @@ const enum Size {small=1,medium,large}
 //optimize the code when i use const keyword
 let mySize:Size=Size.medium
 console.log(mySize);
+
+
+// functions
+function calculate(income:number,year=2022):number{
+    if(year>2023){
+        return 2024
+    }
+    if(income>50_000){
+        return income*2
+    }else{
+        return income-100
+    }
+  
+}
+
+calculate(15000)
