@@ -55,5 +55,18 @@ function calculate(income:number,year=2022):number{
     }
   
 }
-
 calculate(15000)
+
+//Objects
+
+let employee:{
+   readonly id:Number,
+    name:String,
+    retire:(date:Date)=>void
+}={
+    id:23,
+    name:"Sanay",
+    retire:(date:Date)=>console.log(date)
+    
+}
+
