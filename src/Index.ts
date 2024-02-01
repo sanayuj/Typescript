@@ -65,14 +65,18 @@ let employee: Employee = {
   retire: (date: Date) => console.log(date),
 };
 
-
 //Union types
 
-function kgtoLbs(weight:number | string):number{
-if( typeof weight ==='number'){
-    return weight*2.2
-}else{
-    return parseInt(weight)*2.2
+function kgtoLbs(weight: number | string): number {
+  if (typeof weight === "number") {
+    return weight * 2.2;
+  } else {
+    return parseInt(weight) * 2.2;
+  }
 }
 
-}
+
+// Literal types
+
+type Quanitiy =50 | 100
+let quantity:Quanitiy=100
