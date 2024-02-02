@@ -80,3 +80,19 @@ function kgtoLbs(weight: number | string): number {
 
 type Quanitiy =50 | 100
 let quantity:Quanitiy=100
+
+
+//Q1
+
+class GameObject {
+  constructor(public x: number, public y: number){}
+}
+
+class Circle extends GameObject {
+  constructor(x: number, y: number, public radius: number) {
+      super(x, y);
+  }
+}
+
+let circle = new Circle(10, 50, 8);
+console.log(circle.x, circle.y, circle.radius);
