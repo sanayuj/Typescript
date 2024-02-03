@@ -96,3 +96,27 @@ class Circle extends GameObject {
 
 let circle = new Circle(10, 50, 8);
 console.log(circle.x, circle.y, circle.radius);
+
+
+
+type User={
+  readonly id:number
+userName:string
+isPaid:boolean
+email:string
+}
+
+
+let newUser:User={
+  id:342323,
+  userName:"Sanay",
+  isPaid:true,
+  email:"Sanay2@gmail.com"
+}
+
+function createUser(arg:User):{}{
+return arg
+  
+}
+
+createUser({id:1,userName:"Sanay",isPaid:true,email:"sanayuj@gmail"})
