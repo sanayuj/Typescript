@@ -120,3 +120,17 @@ return arg
 }
 
 createUser({id:1,userName:"Sanay",isPaid:true,email:"sanayuj@gmail"})
+
+
+type UserDetails={
+  name:string
+  id:number
+}
+
+type AdminDetails={
+  userName:string
+  id:number
+}
+
+let sanayuj:UserDetails|AdminDetails={name:"Sanay",id:21}
+sanayuj={userName:"Admin",id:23}
