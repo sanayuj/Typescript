@@ -134,3 +134,16 @@ type AdminDetails={
 
 let sanayuj:UserDetails|AdminDetails={name:"Sanay",id:21}
 sanayuj={userName:"Admin",id:23}
+
+
+function getDetailsId(id:string|number){
+  if(typeof id==="string"){
+    id.toLowerCase()
+    
+  }else{
+  console.log("id is number!");
+  }
+}
+
+getDetailsId(2)
+getDetailsId("5")
