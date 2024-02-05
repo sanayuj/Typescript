@@ -147,3 +147,6 @@ function getDetailsId(id:string|number){
 
 getDetailsId(2)
 getDetailsId("5")
+
+
+const data:(number|string|boolean)[]=[1,"2",true]
