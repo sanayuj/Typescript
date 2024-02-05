@@ -150,3 +150,6 @@ getDetailsId("5")
 
 
 const data:(number|string|boolean)[]=[1,"2",true]
+
+let seat:"front"|"middle"|"back"
+seat="front"
