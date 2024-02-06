@@ -186,3 +186,16 @@ interface UserDetail{
 interface Admin extends UserDetail{
 
 }
+
+
+
+class AdminDetail{
+  email:string
+  password:string
+  constructor(email:string,password:string){
+    this.email=email,
+    this.password=password
+  }
+}
+
+const Sanay=new AdminDetail("Sanay@gmail.com","sdsdf")
