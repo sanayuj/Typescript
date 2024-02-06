@@ -162,3 +162,27 @@ Window
 }
 
 const seatRequired=windowSeat.Aisle
+
+
+
+interface UserDetail{
+  readonly id:number
+  guthubToken:string
+  email:string
+  userId:string
+  googleId:string
+  startTrial:()=>string
+  getCoupon:(name:string,value:number)=>string
+}
+
+//reopening interface
+
+interface UserDetail{
+  gitHubId:number
+}
+
+//inhertiance
+
+interface Admin extends UserDetail{
+
+}
