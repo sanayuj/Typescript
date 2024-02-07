@@ -75,140 +75,136 @@ function kgtoLbs(weight: number | string): number {
   }
 }
 
-
 // Literal types
 
-type Quanitiy =50 | 100
-let quantity:Quanitiy=100
-
+type Quanitiy = 50 | 100;
+let quantity: Quanitiy = 100;
 
 //Q1
 
 class GameObject {
-  constructor(public x: number, public y: number){}
+  constructor(public x: number, public y: number) {}
 }
 
 class Circle extends GameObject {
   constructor(x: number, y: number, public radius: number) {
-      super(x, y);
+    super(x, y);
   }
 }
 
 let circle = new Circle(10, 50, 8);
 console.log(circle.x, circle.y, circle.radius);
 
+type User = {
+  readonly id: number;
+  userName: string;
+  isPaid: boolean;
+  email: string;
+};
 
+let newUser: User = {
+  id: 342323,
+  userName: "Sanay",
+  isPaid: true,
+  email: "Sanay2@gmail.com",
+};
 
-type User={
-  readonly id:number
-userName:string
-isPaid:boolean
-email:string
+function createUser(arg: User): {} {
+  return arg;
 }
 
+createUser({ id: 1, userName: "Sanay", isPaid: true, email: "sanayuj@gmail" });
 
-let newUser:User={
-  id:342323,
-  userName:"Sanay",
-  isPaid:true,
-  email:"Sanay2@gmail.com"
-}
+type UserDetails = {
+  name: string;
+  id: number;
+};
 
-function createUser(arg:User):{}{
-return arg
-  
-}
+type AdminDetails = {
+  userName: string;
+  id: number;
+};
 
-createUser({id:1,userName:"Sanay",isPaid:true,email:"sanayuj@gmail"})
+let sanayuj: UserDetails | AdminDetails = { name: "Sanay", id: 21 };
+sanayuj = { userName: "Admin", id: 23 };
 
-
-type UserDetails={
-  name:string
-  id:number
-}
-
-type AdminDetails={
-  userName:string
-  id:number
-}
-
-let sanayuj:UserDetails|AdminDetails={name:"Sanay",id:21}
-sanayuj={userName:"Admin",id:23}
-
-
-function getDetailsId(id:string|number){
-  if(typeof id==="string"){
-    id.toLowerCase()
-    
-  }else{
-  console.log("id is number!");
+function getDetailsId(id: string | number) {
+  if (typeof id === "string") {
+    id.toLowerCase();
+  } else {
+    console.log("id is number!");
   }
 }
 
-getDetailsId(2)
-getDetailsId("5")
+getDetailsId(2);
+getDetailsId("5");
 
+const data: (number | string | boolean)[] = [1, "2", true];
 
-const data:(number|string|boolean)[]=[1,"2",true]
+let seat: "front" | "middle" | "back";
+seat = "front";
 
-let seat:"front"|"middle"|"back"
-seat="front"
-
-
-const enum windowSeat{
-Aisle,
-Middle,
-Window
+const enum windowSeat {
+  Aisle,
+  Middle,
+  Window,
 }
 
-const seatRequired=windowSeat.Aisle
+const seatRequired = windowSeat.Aisle;
 
-
-
-interface UserDetail{
-  readonly id:number
-  guthubToken:string
-  email:string
-  userId:string
-  googleId:string
-  startTrial:()=>string
-  getCoupon:(name:string,value:number)=>string
+interface UserDetail {
+  readonly id: number;
+  guthubToken: string;
+  email: string;
+  userId: string;
+  googleId: string;
+  startTrial: () => string;
+  getCoupon: (name: string, value: number) => string;
 }
 
 //reopening interface
 
-interface UserDetail{
-  gitHubId:number
+interface UserDetail {
+  gitHubId: number;
 }
 
 //inhertiance
 
-interface Admin extends UserDetail{
+interface Admin extends UserDetail {}
 
-}
-
-
-
-class AdminDetail{
-  email:string
- password:string
-  constructor(email:string,password:string){
-    this.email=email,
-    this.password=password
+class AdminDetail {
+  protected email: string;
+  password: string;
+  constructor(email: string, password: string) {
+    (this.email = email), (this.password = password);
   }
-  get fetchEmail():string{
-    return `apple${this.email}`
+  get fetchEmail(): string {
+    return `apple${this.email}`;
   }
 
-  set setValue(courseNum:number){
-    if(courseNum>1){
-      throw new Error("Invaild number")
+  set setValue(courseNum: number) {
+    if (courseNum > 1) {
+      throw new Error("Invaild number");
     }
-    this.setValue=courseNum
+    this.setValue = courseNum;
   }
- 
 }
 
+class subUser extends AdminDetail {
+  isFamily: boolean = true;
+  fetch() {
+    console.log(this.email);
+  }
+}
+const Sanay = new AdminDetail("Sanay@gmail.com", "sdsdf");
+console.log(Sanay.password);
 
+//abstract class
 
-const Sanay=new AdminDetail("Sanay@gmail.com","sdsdf")
+class TakePhoto {
+  constructor(public mode: string, public fliter: number) {}
+}
+
+class NewClass extends TakePhoto{
+  
+}
