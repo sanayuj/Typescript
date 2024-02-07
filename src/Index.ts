@@ -206,5 +206,16 @@ class TakePhoto {
 }
 
 class NewClass extends TakePhoto{
-  
+
+}
+
+
+//Generics
+
+function fetechUserName<Type>(val:Type):Type{
+  return val
+}
+
+function fetechAdminName<T>(val:T):T{
+  return val
 }
