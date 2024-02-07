@@ -228,3 +228,8 @@ interface Bus{
 function fetchBusDetails<Bus>(value:Bus):Bus{
   return value
 }
+
+function passArray<T>(products:T[]): T{
+  const indexValue=3
+  return products[indexValue]
+}
