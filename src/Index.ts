@@ -219,3 +219,12 @@ function fetechUserName<Type>(val:Type):Type{
 function fetechAdminName<T>(val:T):T{
   return val
 }
+
+interface Bus{
+  name:string
+  location:string
+}
+
+function fetchBusDetails<Bus>(value:Bus):Bus{
+  return value
+}
