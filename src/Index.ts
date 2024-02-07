@@ -191,11 +191,24 @@ interface Admin extends UserDetail{
 
 class AdminDetail{
   email:string
-  password:string
+ password:string
   constructor(email:string,password:string){
     this.email=email,
     this.password=password
   }
+  get fetchEmail():string{
+    return `apple${this.email}`
+  }
+
+  set setValue(courseNum:number){
+    if(courseNum>1){
+      throw new Error("Invaild number")
+    }
+    this.setValue=courseNum
+  }
+ 
 }
+
+
 
 const Sanay=new AdminDetail("Sanay@gmail.com","sdsdf")
