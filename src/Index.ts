@@ -241,17 +241,19 @@ const newValue=<T>(product:T[]):T=>{
   return product[indexValue]
 }
 
+//Generics extends interface
+
 interface dbConnection{
   connection:string
   url:string
   id:number
 }
 
-function pokimonFetech <T,U extends dbConnection>(value1:T,value2:T):object{
+function pokimonFetech <T,U extends dbConnection>(value1:T,value2:U):object{
   return {
     value1,
     value2
   }
 } 
 
-pokimonFetech(2,{})
+pokimonFetech(2,{connection:"sdd",url:"sds",id:33})
