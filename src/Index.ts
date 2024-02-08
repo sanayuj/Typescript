@@ -233,3 +233,10 @@ function passArray<T>(products:T[]): T{
   const indexValue=3
   return products[indexValue]
 }
+
+//Generics in arrow function
+
+const newValue=<T>(product:T[]):T=>{
+  const indexValue=4
+  return product[indexValue]
+}
