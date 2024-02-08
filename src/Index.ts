@@ -240,3 +240,18 @@ const newValue=<T>(product:T[]):T=>{
   const indexValue=4
   return product[indexValue]
 }
+
+interface dbConnection{
+  connection:string
+  url:string
+  id:number
+}
+
+function pokimonFetech <T,U extends dbConnection>(value1:T,value2:T):object{
+  return {
+    value1,
+    value2
+  }
+} 
+
+pokimonFetech(2,{})
