@@ -257,3 +257,14 @@ function pokimonFetech <T,U extends dbConnection>(value1:T,value2:U):object{
 } 
 
 pokimonFetech(2,{connection:"sdd",url:"sds",id:33})
+
+
+//narrowing
+
+
+function fetchDataType(val:number | string){
+  if(typeof val ==="string"){
+    return val.toLowerCase()
+  }
+  return val+8
+}
